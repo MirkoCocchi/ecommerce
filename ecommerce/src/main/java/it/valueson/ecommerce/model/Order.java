@@ -11,8 +11,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.apache.tomcat.jni.User;
-
 @Entity
 @Table(name = "order")
 public class Order {
