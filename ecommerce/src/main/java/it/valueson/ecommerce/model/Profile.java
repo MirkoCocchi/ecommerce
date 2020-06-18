@@ -3,6 +3,7 @@ package it.valueson.ecommerce.model;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,7 +19,7 @@ public class Profile {
 	private Long id;
 	private String description;
 	
-	@OneToMany(mappedBy = "profile")
+	@OneToMany(mappedBy = "profile",fetch = FetchType.LAZY)
 	private List<User> users;
 
 	public Long getId() {
